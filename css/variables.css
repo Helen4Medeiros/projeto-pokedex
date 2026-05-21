@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --red:         #E3350D;
+  --red-dark:    #9B1B0A;
+  --red-light:   #FF5533;
+  --red-glow:    rgba(227,53,13,0.4);
+  --yellow:      #FFCB05;
+  --yellow-dim:  rgba(255,203,5,0.12);
+  --yellow-glow: rgba(255,203,5,0.35);
+  --blue:        #3B4CCA;
+  --blue-light:  #6890F0;
+
+  --bg:          #08080f;
+  --surface:     #0f0f1a;
+  --card:        #131320;
+  --card-hover:  #1a1a2e;
+
+  --border:        rgba(255,255,255,0.06);
+  --border-bright: rgba(255,255,255,0.14);
+  --border-red:    rgba(227,53,13,0.3);
+  --border-yellow: rgba(255,203,5,0.25);
+
+  --text:       #f0f0f8;
+  --text-muted: #5a5a7a;
+  --text-dim:   #2e2e45;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-ui:      'Rajdhani', sans-serif;
+  --font-body:    'Outfit', sans-serif;
+
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   22px;
+  --r-xl:   32px;
+  --r-full: 9999px;
+
+  --z-nav:    100;
+  --z-detail: 200;
+  --z-toast:  999;
+
+  --ease:     0.2s cubic-bezier(0.4,0,0.2,1);
+  --ease-out: 0.45s cubic-bezier(0.16,1,0.3,1);
+}
+
+:root {
+  --type-normal:   #9FA19F;
+  --type-fire:     #E62829;
+  --type-water:    #2980EF;
+  --type-electric: #FAC000;
+  --type-grass:    #3FA129;
+  --type-ice:      #3DCEF3;
+  --type-fighting: #FF8000;
+  --type-poison:   #9141CB;
+  --type-ground:   #915121;
+  --type-flying:   #81B9EF;
+  --type-psychic:  #EF4179;
+  --type-bug:      #91A119;
+  --type-rock:     #AFA981;
+  --type-ghost:    #704170;
+  --type-dragon:   #5060E1;
+  --type-dark:     #624D4E;
+  --type-steel:    #60A1B8;
+  --type-fairy:    #EF70EF;
+}
+
+:root {
+  --stat-hp:              #FF5959;
+  --stat-attack:          #F5AC78;
+  --stat-defense:         #FAE078;
+  --stat-special-attack:  #9DB7F5;
+  --stat-special-defense: #A7DB8D;
+  --stat-speed:           #FA92B2;
+}
