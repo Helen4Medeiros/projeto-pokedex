@@ -1,20 +1,35 @@
-# 🇧🇷 Projeto-Pokedex - Pokédex Nacional
+<h1 align="center">🇧🇷 Projeto-Pokedex — Pokédex Nacional</h1>
 
-Uma Pokédex Nacional completa desenvolvida como projeto pessoal com foco em demonstrar habilidades de **Front-End**, organização de código e consumo de APIs utilizando apenas **HTML, CSS e JavaScript puro**.
+<p align="center">
+  Uma Pokédex moderna desenvolvida com HTML, CSS e JavaScript puro.
+</p>
 
-O projeto foi inspirado na estrutura de frameworks modernos como o Vue.js, utilizando separação por componentes, renderização dinâmica e organização modular do código.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-online-success?style=flat-square">
+  <img src="https://img.shields.io/badge/version-1.0-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/license-study_project-orange?style=flat-square">
+</p>
 
 ---
 
-## Demonstração
+## 🌐 Demonstração
 
-```bash
-https://projeto-pokedex-jet.vercel.app/
-```
+<p align="center">
+  <a href="https://projeto-pokedex-jet.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🔗_Acessar_Projeto-ffcb05?style=for-the-badge&logo=vercel&logoColor=black" />
+  </a>
+</p>
 
 ---
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 ### Tela Inicial
 
@@ -27,13 +42,14 @@ https://projeto-pokedex-jet.vercel.app/
   - Número da Pokédex
   - Maior ataque
   - Maior defesa
-  - E outras ordenações gerais
+  - Maior HP
+  - Mais Veloz
 - Modo **Shiny** com atualização dinâmica de todos os Pokémon
 - Navegação fluida entre páginas
 
 ### Tela de Favoritos
 
-- Exibe apenas os Pokémon favoritadas pelo usuário
+- Exibe apenas os Pokémon favoritados pelo usuário
 - Persistência local dos favoritos
 - Atualização dinâmica da interface
 
@@ -46,7 +62,15 @@ https://projeto-pokedex-jet.vercel.app/
 
 ---
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,git,github,vscode" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/API-PokeAPI-EF5350?style=for-the-badge&logo=pokemon&logoColor=white" />
+</p>
 
 - HTML5
 - CSS3
@@ -56,7 +80,7 @@ https://projeto-pokedex-jet.vercel.app/
 
 ---
 
-## Conceitos Aplicados
+## 🧠 Conceitos Aplicados
 
 Este projeto foi desenvolvido com foco em aplicar conceitos importantes do desenvolvimento Front-End moderno, como:
 
@@ -72,7 +96,7 @@ Este projeto foi desenvolvido com foco em aplicar conceitos importantes do desen
 
 ---
 
-## Objetivo do Projeto
+## 🎯 Objetivo do Projeto
 
 O principal objetivo deste projeto foi:
 
@@ -84,16 +108,16 @@ O principal objetivo deste projeto foi:
 
 ---
 
-## Responsividade
+## 📱 Responsividade
 
 O projeto possui adaptação para diferentes tamanhos de tela, proporcionando uma experiência agradável tanto em desktop quanto em dispositivos móveis.
 
 ---
 
-## Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```bash
-p-pokedex/
+projeto-pokedex/
 │
 ├── css/
 │   ├── animations.css
@@ -123,7 +147,7 @@ p-pokedex/
 
 ---
 
-## Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
 ### 1. Clone o repositório
 
@@ -147,7 +171,7 @@ Ou utilize uma extensão como:
 
 ---
 
-## Autora
+## 👩‍💻 Autora
 
 Desenvolvido por **Maria Helena CM**, estudante de **INFOWEB 3** no IFRN CNAT.
 
@@ -159,7 +183,7 @@ Feedbacks e ideias sobre o projeto, fique à vontade para entrar em contato:
 
 ---
 
-## Licença
+## 📄 Licença
 
 Este projeto foi desenvolvido para fins de estudo, prática e portfólio.
 
