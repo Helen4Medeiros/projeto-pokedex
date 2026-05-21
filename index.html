@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokédex BR</title>
-  <meta name="description" content="Pokédex completa com todos os Pokémon, estatísticas, evoluções e muito mais." />
-
-  <!-- fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/detail.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokédex Nacional</title>
+  <meta name="description" content="Pokédex completa com todos os Pokémon, estatísticas, evoluções e mais."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/detail.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
 </head>
-
 <body>
   <div id="app">
-    <!-- particulas -->
     <canvas id="particles-canvas"></canvas>
 
-    <!-- navbar -->
+    <!-- nav-bar -->
     <app-navbar
       :search="search"
-      :type-filter="typeFilter"
       :sort-by="sortBy"
       :current-gen="currentGen"
       :shiny-mode="shinyMode"
+      :favs-open="favsOpen"
+      :screen="screen"
       @update:search="search = $event"
-      @update:type-filter="typeFilter = $event"
       @update:sort-by="sortBy = $event"
       @update:current-gen="currentGen = $event"
       @toggle-shiny="shinyMode = !shinyMode"
+      @open-favs="openFavs"
+      @go-home="goHome"
     ></app-navbar>
 
-    <!-- Mmain list view -->
-    <main v-show="!detailOpen" id="main-view">
-      <app-hero
+    <!-- inicio -->
+    <main v-show="screen === 'home'">
+      <app-header
         :filtered-count="filteredList.length"
         :total-count="allPokemon.length"
         :loading="isLoading"
         :load-progress="loadProgress"
-      ></app-hero>
+        :type-filter="typeFilter"
+        @update:type-filter="typeFilter = $event"
+      ></app-header>
 
       <div class="page-wrap" v-show="!isLoading || allPokemon.length > 0">
         <div class="grid" v-if="filteredList.length > 0">
@@ -61,43 +59,52 @@
             @toggle-favorite="toggleFavorite"
           ></pokemon-card>
         </div>
-        <div class="empty" v-else-if="!isLoading">
+        <div class="empty" v-else-if="!isLoading && allPokemon.length > 0">
           <span class="empty-icon">😶</span>
           <p>Nenhum Pokémon encontrado.</p>
           <small>Tente outro nome, número ou tipo.</small>
         </div>
       </div>
+
+      <app-footer></app-footer>
     </main>
 
-    <!-- detail page -->
+    <!-- tela de detalhes -->
     <pokemon-detail
-      v-if="detailOpen"
+      v-if="screen === 'detail'"
       :pokemon="selectedPokemon"
       :shiny-mode="shinyMode"
       :is-favorite="selectedPokemon ? favorites.includes(selectedPokemon.id) : false"
-      @close="closeDetail"
+      @close="goHome"
       @toggle-favorite="toggleFavorite"
       @navigate="openDetail"
     ></pokemon-detail>
 
-    <!-- scroll to top -->
-    <button class="scroll-top" :class="{ visible: showScrollTop }" @click="scrollToTop" aria-label="Voltar ao topo">↑</button>
+    <!-- tela de favoritos -->
+    <favs-page
+      v-if="screen === 'favs'"
+      :favorites-list="favoritesList"
+      :shiny-mode="shinyMode"
+      :favorites="favorites"
+      @go-home="goHome"
+      @open-detail="openDetail"
+      @toggle-favorite="toggleFavorite"
+    ></favs-page>
 
-    <!-- toast -->
+    <button class="scroll-top" :class="{ visible: showScrollTop }" @click="scrollToTop">↑</button>
     <div class="toast" :class="{ show: toast.show }">{{ toast.message }}</div>
   </div>
 
-  <!-- vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-
-  <!-- app-modulos -->
   <script src="js/constants.js"></script>
   <script src="js/api.js"></script>
-  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/components/NavBar.js"></script>
-  <script src="js/components/Hero.js"></script>
+  <script src="js/components/Header.js"></script>
   <script src="js/components/PokemonCard.js"></script>
   <script src="js/components/PokemonDetail.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/components/FavsPage.js"></script>
+  <script src="js/components/Footer.js"></script>
+  <script src="js/mount.js"></script>
 </body>
 </html>
