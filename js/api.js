@@ -1,4 +1,4 @@
-// POKEAPI 
+// pokeapi
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
 
@@ -9,7 +9,7 @@ const BASE_URL = 'https://pokeapi.co/api/v2';
  */
 async function fetchPokemonList(limit = TOTAL_POKEMON) {
   const res = await fetch(`${BASE_URL}/pokemon?limit=${limit}`);
-  if (!res.ok) throw new Error('Falha ao buscar lista de Pokémon');
+  if (!res.ok) throw new Error('Falha ao buscar lista de Pokémon.');
   const data = await res.json();
   return data.results;
 }
@@ -19,6 +19,7 @@ async function fetchPokemonList(limit = TOTAL_POKEMON) {
  * @param {string} urlOrId
  * @returns {Promise<Object>}
  */
+
 async function fetchPokemon(urlOrId) {
   const url = typeof urlOrId === 'string' && urlOrId.startsWith('http')
     ? urlOrId
@@ -29,10 +30,11 @@ async function fetchPokemon(urlOrId) {
 }
 
 /**
- * Fetches pokemon species data (flavor text, evolution chain url, etc.)
+ * Fetches pokemon species data.
  * @param {number|string} id
  * @returns {Promise<Object>}
  */
+
 async function fetchSpecies(id) {
   const res = await fetch(`${BASE_URL}/pokemon-species/${id}`);
   if (!res.ok) throw new Error(`Falha ao buscar espécie: ${id}`);
@@ -44,6 +46,7 @@ async function fetchSpecies(id) {
  * @param {string} url  - full URL from species.evolution_chain.url
  * @returns {Promise<Object>}
  */
+
 async function fetchEvolutionChain(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error('Falha ao buscar cadeia de evolução');
@@ -55,6 +58,7 @@ async function fetchEvolutionChain(url) {
  * @param {Object} chain  - evoData.chain
  * @returns {Array}
  */
+
 function flattenEvolutionChain(chain) {
   const result = [];
   let cur = chain;
@@ -97,6 +101,7 @@ function getSprite(pokemon, shiny = false) {
  * @param {number} digits
  * @returns {string}
  */
+
 function padId(id, digits = 4) {
   return String(id).padStart(digits, '0');
 }
@@ -106,6 +111,7 @@ function padId(id, digits = 4) {
  * @param {Object} pokemon
  * @returns {string}
  */
+
 function primaryColor(pokemon) {
   const t = pokemon.types?.[0]?.type?.name;
   return TYPE_COLORS[t] || '#888';
@@ -117,6 +123,7 @@ function primaryColor(pokemon) {
  * @param {string} statName  e.g. 'hp', 'attack'
  * @returns {number}
  */
+
 function getStat(pokemon, statName) {
   return pokemon.stats?.find(s => s.stat.name === statName)?.base_stat ?? 0;
 }
