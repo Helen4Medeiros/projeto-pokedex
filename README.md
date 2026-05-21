@@ -8,8 +8,6 @@ O projeto foi inspirado na estrutura de frameworks modernos como o Vue.js, utili
 
 ## Demonstração
 
-> Adicione aqui o link do deploy do projeto (Vercel, Netlify ou GitHub Pages)
-
 ```bash
 https://projeto-pokedex-jet.vercel.app/
 ```
