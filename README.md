@@ -18,6 +18,32 @@
 </p>
 
 ---
+---
+
+## 🖼️ Preview de Interface
+
+<p align="center">
+  <img src="<img width="1920" height="946" alt="Captura de tela 2026-05-21 210608" src="https://github.com/user-attachments/assets/d4f2646c-7c22-48c2-81e8-6d2d37ff09d5"/>
+</p>
+<p align="center">
+  <em>Tela inicial da Pokédex com listagem completa dos Pokémon.</em>
+</p>
+<br>
+<p align="center">
+  <img src="<img width="1920" height="943" alt="Captura de tela 2026-05-21 210744" src="https://github.com/user-attachments/assets/0a317483-52b5-455e-85e3-96e0f553b861"/>
+</p>
+<p align="center">
+  <em>Tela de detalhes do Pokémon.</em>
+</p>
+<br>
+<p align="center">
+  <img src="<img width="1920" height="946" alt="Captura de tela 2026-05-21 210759" src="https://github.com/user-attachments/assets/4fa3a9fa-18ed-456e-8394-cd8c7aee8540"/>
+</p>
+<p align="center">
+  <em>Sistema de favoritos.</em>
+</p>
+
+---
 
 ## 🌐 Demonstração
 
@@ -29,36 +55,54 @@
 
 ---
 
-## ✨ Funcionalidades
+## 🚀 Principais Funcionalidades
 
-### Tela Inicial
+<table>
+<tr>
 
-- Listagem completa dos **1025 Pokémon** em cards
-- Sistema de favoritos
-- Filtros por:
-  - Tipo
-  - Geração
-  - Ordem alfabética
-  - Número da Pokédex
-  - Maior ataque
-  - Maior defesa
-  - Maior HP
-  - Mais Veloz
-- Modo **Shiny** com atualização dinâmica de todos os Pokémon
-- Navegação fluida entre páginas
+<td width="50%">
 
-### Tela de Favoritos
+### 🔍 Sistema de Filtros
+- Filtragem por tipo
+- Filtragem por geração
+- Ordenação alfabética
+- Ordenação por atributos
 
-- Exibe apenas os Pokémon favoritados pelo usuário
-- Persistência local dos favoritos
-- Atualização dinâmica da interface
+</td>
 
-### Tela de Detalhes
+<td width="50%">
 
-- Informações detalhadas do Pokémon selecionado
-- Exibição de estatísticas
-- Imagens e dados carregados via API
-- Interface inspirada na Pokédex clássica
+### ⭐ Favoritos
+- Favoritar Pokémon
+- Persistência local
+- Página exclusiva de favoritos
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%">
+
+### ✨ Modo Shiny
+- Alternância dinâmica
+- Atualização completa dos cards
+- Visual alternativo dos Pokémon
+
+</td>
+
+<td width="50%">
+
+### 📖 Tela de Detalhes
+- Estatísticas completas
+- Informações do Pokémon
+- Interface inspirada na Pokédex
+
+</td>
+
+</tr>
+</table>
 
 ---
 
