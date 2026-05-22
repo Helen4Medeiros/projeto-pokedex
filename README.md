@@ -18,26 +18,25 @@
 </p>
 
 ---
----
 
 ## 🖼️ Preview de Interface
 
 <p align="center">
-  <img src="<img width="1920" height="946" alt="Captura de tela 2026-05-21 210608" src="https://github.com/user-attachments/assets/d4f2646c-7c22-48c2-81e8-6d2d37ff09d5"/>
+  <img src="./assets/screenshots/tela_inicial.png" width="800"/>
 </p>
 <p align="center">
   <em>Tela inicial da Pokédex com listagem completa dos Pokémon.</em>
 </p>
 <br>
 <p align="center">
-  <img src="<img width="1920" height="943" alt="Captura de tela 2026-05-21 210744" src="https://github.com/user-attachments/assets/0a317483-52b5-455e-85e3-96e0f553b861"/>
+  <img src="./assets/screenshots/tela_detalhes.png" width="800"/>
 </p>
 <p align="center">
   <em>Tela de detalhes do Pokémon.</em>
 </p>
 <br>
 <p align="center">
-  <img src="<img width="1920" height="946" alt="Captura de tela 2026-05-21 210759" src="https://github.com/user-attachments/assets/4fa3a9fa-18ed-456e-8394-cd8c7aee8540"/>
+  <img src="./assets/screenshots/tela_favoritos.png" width="800"/>
 </p>
 <p align="center">
   <em>Sistema de favoritos.</em>
