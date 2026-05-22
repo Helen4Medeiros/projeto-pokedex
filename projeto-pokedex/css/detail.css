@@ -1,4 +1,3 @@
-/* DETAIL PAGE */
 .detail-page {
   position: fixed; inset: 0;
   background: var(--bg);
@@ -7,7 +6,6 @@
   animation: slideUp 0.3s var(--ease-out);
 }
 
-/* BACK BAR */
 .detail-topbar {
   position: sticky; top: 0; z-index: 10;
   background: rgba(8,8,15,0.9);
@@ -37,13 +35,14 @@
 }
 .detail-topbar-fav:hover, .detail-topbar-fav.active { opacity: 1; transform: scale(1.2); }
 
-/* HERO (header) BAND */
+
 .detail-hero-band {
   position: relative; overflow: hidden;
   min-height: 360px;
   display: flex; align-items: flex-end;
 }
 
+/* Layered background */
 .detail-hero-band::before {
   content: ''; position: absolute; inset: 0;
   background: var(--hero-gradient, linear-gradient(135deg, #1a0a0a, #0a0a1a));
@@ -51,21 +50,44 @@
 }
 
 .detail-band-pokeball {
-  position: absolute; 
-  right: -120px; top: -120px;
-  width: 500px; height: 500px; border-radius: 50%;
-  border: 80px solid rgba(255,255,255,0.04);
-  z-index: 1;
+  position: absolute;
+  right: -130px; top: -130px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  border: 90px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  z-index: 0;
+  box-sizing: border-box;
 }
+/* Outer halo ring */
 .detail-band-pokeball::before {
-  content: ''; position: absolute; inset: -50px; border-radius: 50%;
-  border: 50px solid rgba(255,255,255,0.025);
+  content: '';
+  position: absolute;
+  inset: -55px;
+  border-radius: 50%;
+  border: 55px solid rgba(255, 255, 255, 0.022);
+  pointer-events: none;
 }
+/* Horizontal centre band (pokéball divider) */
 .detail-band-pokeball::after {
-  content: ''; position: absolute;
-  top: 50%; left: -100%; right: -100%;
-  height: 80px; margin-top: -40px;
-  background: rgba(0,0,0,0.15);
+  content: '';
+  position: absolute;
+  top: 50%; left: -10%;
+  width: 120%; height: 72px;
+  margin-top: -36px;
+  background: rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+/* Centre button */
+.detail-band-pokeball-inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 14px solid rgba(255, 255, 255, 0.06);
+  pointer-events: none;
 }
 
 .detail-hero-inner {
@@ -76,7 +98,7 @@
   align-items: center; gap: 2rem;
 }
 
-/* sprite side */
+/* Sprite side */
 .detail-sprite-col { position: relative; text-align: center; }
 .detail-sprite-glow {
   position: absolute; inset: 0;
@@ -92,7 +114,7 @@
   position: relative; z-index: 1;
 }
 
-/* info side */
+/* Info side */
 .detail-num {
   font-family: var(--font-ui); font-size: 17px; font-weight: 700;
   color: rgba(255,255,255,0.35); letter-spacing: 3px; margin-bottom: 4px;
@@ -138,7 +160,7 @@
   margin-bottom: 8px;
 }
 
-/* tabs + body */
+
 .detail-body {
   max-width: 1300px; margin: 0 auto; padding: 0 2rem 4rem;
 }
@@ -159,7 +181,7 @@
 .tab-panel { display: none; animation: popIn 0.22s var(--ease-out); }
 .tab-panel.active { display: block; }
 
-/* stats */
+
 .stats-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px 40px;
 }
@@ -192,7 +214,7 @@
 }
 .stat-total-val { font-family: var(--font-display); font-size: 28px; color: var(--yellow); }
 
-/* evolutions */
+
 .evo-chain { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 1rem 0; }
 .evo-item {
   text-align: center; cursor: pointer;
@@ -209,7 +231,7 @@
 .evo-arrow { font-size: 20px; color: var(--border-bright); }
 .evo-level { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text-dim); text-transform: uppercase; margin-top: 2px; letter-spacing: 1px; }
 
-/* flavor */
+
 .flavor-genus {
   font-family: var(--font-display); font-size: 28px; color: var(--red-light);
   letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
@@ -237,7 +259,7 @@
   text-transform: capitalize;
 }
 
-/* async loading */
+
 .async-loading {
   display: flex; align-items: center; gap: 12px;
   font-family: var(--font-ui); font-size: 17px; font-weight: 600;
@@ -251,7 +273,6 @@
   animation: spin 0.7s linear infinite; flex-shrink: 0;
 }
 
-/* responsive */
 @media (max-width: 860px) {
   .detail-hero-inner { grid-template-columns: 1fr; text-align: center; }
   .detail-types-row, .detail-meta-pills, .detail-abilities-row { justify-content: center; }
@@ -266,11 +287,10 @@
   .detail-tab { padding: 12px 14px; font-size: 12px; }
 }
 
-/* evolutions */
 .evo-chain {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   
   gap: 20px;
   flex-wrap: wrap;
   padding: 2rem 0;
